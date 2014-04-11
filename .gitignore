@@ -1,3 +1,4 @@
 _sql/*
 wp-config.php
 backup/*
+/wp-content/uploads/*
