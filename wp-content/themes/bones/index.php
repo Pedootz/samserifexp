@@ -50,6 +50,7 @@
             <div id="logo" data-role="text" alt="Sam Serif Designs"></div>
             <div id="main-copy">
                 <h1>i'm sam.</h1>
+                <!--comment-->
                 <p>i am a designer based in philly.
                     i create beautiful things for web, print, and apparel with a focus on clean design and usabillity.
                     let's talk about how i can make beautiful things for you.</p>
