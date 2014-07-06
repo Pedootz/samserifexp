@@ -1,3 +1,5 @@
+<?php get_template_part( 'header', 'tom' ); ?>
+
 <style>
     .margin-top {
         margin-top: 10px;
@@ -80,3 +82,4 @@
             <div style='height: 50px; width: 100%'></div><!--do this with a margin on the thumbnail container-->
             </article>
         </div>
+    <?php get_template_part( 'footer', 'tom' ); ?>

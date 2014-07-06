@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <article id='home-content'>
             <div id="logo" data-role="text" alt="Sam Serif Designs"></div>
             <div id="main-copy">
@@ -65,3 +67,4 @@
             <div style='height: 50px; width: 100%'></div><!--do this with a margin on the thumbnail container-->
             </article>
         </div>
+<?php get_footer(); ?>
