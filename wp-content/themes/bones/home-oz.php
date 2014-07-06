@@ -30,6 +30,7 @@
     }
     .preview .prev-button a:hover, .preview .prev-button a:active {
         background-color: #565557 !important;
+        color: white !important;
     }
 </style>
 
