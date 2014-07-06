@@ -35,6 +35,9 @@
     li.filter.active a, li.active a:visited {
         color: white !important;
     }
+    #main-copy h1, #main-copy p {
+        color: #565557 !important;
+    }
 </style>
 
 <article id='home-content'>
