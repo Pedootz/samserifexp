@@ -14,7 +14,7 @@
         background: #565557 !important;
     }
     div#logo {
-        background-image: url("../img/logo-tom.png");
+        background-image: url("./wp-content/themes/bones/library/img/logo-tom.png") !important;
     }
 </style>
 
