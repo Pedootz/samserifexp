@@ -13,6 +13,9 @@
     li.active:not(.thumbnail) {
         background: #565557 !important;
     }
+    div#logo {
+        background-image: url("../img/logo-tom.png");
+    }
 </style>
 
 <article id='home-content'>
