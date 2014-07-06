@@ -32,6 +32,9 @@
         background-color: #565557 !important;
         color: white !important;
     }
+    li.filter.active a, li.active a:visited {
+        color: white !important;
+    }
 </style>
 
 <article id='home-content'>
