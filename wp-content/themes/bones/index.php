@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part( './header' ); ?>
 
 	<article id='home-content'>
             <div id="logo" data-role="text" alt="Sam Serif Designs"></div>
