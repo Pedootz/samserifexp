@@ -52,7 +52,7 @@
                             <?php $thumbnail_img_lg = types_render_field( "full-size-image", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_class = types_render_field( "media-type", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_alt = types_render_field( "alt-text", $thumbnail_custom_para ); ?>
-                            <?php $thumbnail_tom = types_render_field( "tom-desc", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_tom = types_render_field( "tom-desc" ); ?>
                             <?php $thumbnail_desc = get_the_content(); ?>
 
                             <?php if ( $thumbnail_class == "web" ) { ?>
