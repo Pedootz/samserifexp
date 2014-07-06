@@ -1,10 +1,25 @@
+<style>
+    .margin-top {
+        margin-top: 10px;
+    }
+    header#doc-header {
+        background: #565557 !important;
+    }
+    footer#doc-footer {
+        background-color: #565557 !important;
+    }
+    li.active:not(.thumbnail) {
+        background: #565557 !important;
+    }
+</style>
+
 <article id='home-content'>
             <div id="logo" data-role="text" alt="Sam Serif Designs"></div>
             <div id="main-copy">
                 <h1>i'm not sam. i'm tom.</h1>
-                <p>i am a full-stack web developer based in philly. i'm experienced in html, css, js (client and server), php, git, mysql, mongodb, linux server admin, and a whole lot more. i believe in code that communicates in its simplicity, functionality, and brevity. above all, i believe in invisibility... </p>
-                <p>if you're doing it right, they won't be sure you've done anything at all.</p>
-                <p>ps: don't tell sam ;)</p>
+                <p class='margin-top'>i am a full-stack web developer based in philly. i'm experienced in html, css, js (client and server), php, git, mysql, mongodb, linux server admin, and a whole lot more. i believe in code that communicates in its simplicity, functionality, and brevity. above all, i believe in invisibility... </p>
+                <p class='margin-top'>if you're doing it right, they won't be sure you've done anything at all.</p>
+                <p class='margin-top'>ps: don't tell sam ;)</p>
             </div>
             <ul class='control'>
                 <li class="filter active" data-media-type='web' id="web-filter"><a href='#'>web</a></li><!--
