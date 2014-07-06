@@ -15,16 +15,17 @@
     }
     div#logo {
         background-image: url("./wp-content/themes/bones/library/img/logo-tom.png") !important;
+        background-size: 400px 250px !important;
+        height: 250px !important;
     }
 </style>
 
 <article id='home-content'>
             <div id="logo" data-role="text" alt="Sam Serif Designs"></div>
             <div id="main-copy">
-                <h1>i'm not sam. i'm tom.</h1>
+                <h1>i'm tom.</h1>
                 <p class='margin-top'>i am a full-stack web developer based in philly. i'm experienced in html, css, js (client and server), php, git, mysql, mongodb, linux server admin, and a whole lot more. i believe in code that communicates in its simplicity, functionality, and brevity. above all, i believe in invisibility... </p>
                 <p class='margin-top'>if you're doing it right, they won't be sure you've done anything at all.</p>
-                <p class='margin-top'>ps: don't tell sam ;)</p>
             </div>
             <ul class='control'>
                 <li class="filter active" data-media-type='web' id="web-filter"><a href='#'>work</a></li><!--
@@ -51,12 +52,13 @@
                             <?php $thumbnail_img_lg = types_render_field( "full-size-image", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_class = types_render_field( "media-type", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_alt = types_render_field( "alt-text", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_tom = types_render_field( "tom-desc", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_desc = get_the_content(); ?>
 
                             <?php if ( $thumbnail_class == "web" ) { ?>
                                 <li data-media="web" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_web_count; ?>"
                                     <?php if ( $thumbnail_url != "" ) { ?>  data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                    class='thumbnail active visable <?php echo $thumbnail_class; ?>' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    class='thumbnail active visable <?php echo $thumbnail_class; ?>' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_tom; ?>'>
                                     <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
                                 </li>
                                 <?php $thumbnail_web_count++; ?>
@@ -64,7 +66,7 @@
                             <?php } if ( $thumbnail_class == "print" ) { ?>
                                 <li data-media="print" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_print_count; ?>"
                                     <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_tom; ?>'>
                                     <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
                                 </li>
                                 <?php $thumbnail_print_count++; ?>
@@ -72,7 +74,7 @@
                                 <?php } if ( $thumbnail_class == "apparel" ) { ?>
                                 <li data-media="apparel" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_apparel_count; ?>"
                                     <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_tom; ?>'>
                                     <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
                                 </li>
                                 <?php $thumbnail_apparel_count++; ?>
