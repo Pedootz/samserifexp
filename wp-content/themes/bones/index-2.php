@@ -1,5 +1,4 @@
-<?php
-get_header();
+<?php get_header();
 
 if ( !empty($_GET['pay_attention_to_man_behind_curtain']) ) {
     $wants_toms_portfolio = strtolower( $_GET['pay_attention_to_man_behind_curtain'] );
@@ -16,5 +15,6 @@ if ( $wants_toms_portfolio ) {
     get_template_part( 'home' );
 } else {
     get_template_part( 'home', 'oz' );
+}
 
 get_footer();
