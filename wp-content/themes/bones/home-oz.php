@@ -41,7 +41,7 @@
                 <?php if ( $thumbnail_query->have_posts() ) { ?>
 
                     <?php while ( $thumbnail_query->have_posts() ) : $thumbnail_query->the_post(); ?>
-                        <?php if ( has_category(6) { ?>
+                        <?php if ( has_category(6) ) { ?>
                             <?php $thumbnail_url = types_render_field( "website-link", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_orientation = types_render_field( "preview-orientation", $thumbnail_custom_para ); ?>
                             <?php $thumbnail_img_sm = types_render_field( "thumbnail-image", $thumbnail_custom_para ); ?>
