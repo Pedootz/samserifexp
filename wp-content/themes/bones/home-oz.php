@@ -18,6 +18,19 @@
         background-size: 400px 250px !important;
         height: 250px !important;
     }
+    li.filter a, li.filter a:visited {
+        color: #565557 !important;
+    }
+    .preview h1 {
+        color: #565557 !important;
+    }
+    .preview .prev-button a {
+        color: #565557 !important;
+        border: 3px solid #565557 !important;
+    }
+    .preview .prev-button a:hover, .preview .prev-button a:active {
+        background-color: #565557 !important;
+    }
 </style>
 
 <article id='home-content'>
