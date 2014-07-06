@@ -6,13 +6,7 @@
              --><div class='f-color' id='blue'></div>
             </div>
             <div id='footer-contents'>
-                <div id='footer-clients'>
-                    <h1 id='clients-heading'>clients</h1><!--
-                 --><div class='client' id='client-mrac'></div><!--
-                 --><div class='client' id='client-adpi'></div><!--
-                 --><div class='client' id='client-inter'></div>
-                </div><!--
-             --><div id='footer-social'>
+                <div id='footer-social'>
                     <h1>social</h1>
                     <a target='_blank' href='mailto:thomas.peduto@gmail.com'><div class='social-bot' id='mail-bot'></div></a><!--
                  --><a target='_blank' href='https://www.linkedin.com/in/thomaspeduto'><div class='social-bot' id='linked-bot'></div></a>

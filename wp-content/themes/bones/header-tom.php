@@ -42,5 +42,5 @@
          <div id='doc-wrapper'>
             <header id='doc-header'>
                 <a class='header-social' id='linked-header' target='_blank' href='https://www.linkedin.com/in/thomaspeduto'></a>
-                <a class='header-social' id='mail-header' target='_blank' href='mailto:thomas.peduto@gmail.com.com'></a>
+                <a class='header-social' id='mail-header' target='_blank' href='mailto:thomas.peduto@gmail.com'></a>
             </header>

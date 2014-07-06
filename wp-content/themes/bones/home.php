@@ -26,40 +26,40 @@
                 <?php if ( $thumbnail_query->have_posts() ) { ?>
 
                     <?php while ( $thumbnail_query->have_posts() ) : $thumbnail_query->the_post(); ?>
+                        <?php if ( !has_category(7) { ?>
+                            <?php $thumbnail_url = types_render_field( "website-link", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_orientation = types_render_field( "preview-orientation", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_img_sm = types_render_field( "thumbnail-image", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_img_lg = types_render_field( "full-size-image", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_class = types_render_field( "media-type", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_alt = types_render_field( "alt-text", $thumbnail_custom_para ); ?>
+                            <?php $thumbnail_desc = get_the_content(); ?>
 
-                        <?php $thumbnail_url = types_render_field( "website-link", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_orientation = types_render_field( "preview-orientation", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_img_sm = types_render_field( "thumbnail-image", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_img_lg = types_render_field( "full-size-image", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_class = types_render_field( "media-type", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_alt = types_render_field( "alt-text", $thumbnail_custom_para ); ?>
-                        <?php $thumbnail_desc = get_the_content(); ?>
+                            <?php if ( $thumbnail_class == "web" ) { ?>
+                                <li data-media="web" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_web_count; ?>"
+                                    <?php if ( $thumbnail_url != "" ) { ?>  data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
+                                    class='thumbnail active visable <?php echo $thumbnail_class; ?>' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
+                                </li>
+                                <?php $thumbnail_web_count++; ?>
 
-                        <?php if ( $thumbnail_class == "web" ) { ?>
-                            <li data-media="web" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_web_count; ?>"
-                                <?php if ( $thumbnail_url != "" ) { ?>  data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                class='thumbnail active visable <?php echo $thumbnail_class; ?>' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
-                                <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
-                            </li>
-                            <?php $thumbnail_web_count++; ?>
+                            <?php } if ( $thumbnail_class == "print" ) { ?>
+                                <li data-media="print" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_print_count; ?>"
+                                    <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
+                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
+                                </li>
+                                <?php $thumbnail_print_count++; ?>
 
-                        <?php } if ( $thumbnail_class == "print" ) { ?>
-                            <li data-media="print" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_print_count; ?>"
-                                <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
-                                <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
-                            </li>
-                            <?php $thumbnail_print_count++; ?>
-
-                            <?php } if ( $thumbnail_class == "apparel" ) { ?>
-                            <li data-media="apparel" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_apparel_count; ?>"
-                                <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
-                                class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
-                                <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
-                            </li>
-                            <?php $thumbnail_apparel_count++; ?>
+                                <?php } if ( $thumbnail_class == "apparel" ) { ?>
+                                <li data-media="apparel" data-orientation="<?php echo $thumbnail_orientation; ?>" data-position="<?php echo $thumbnail_apparel_count; ?>"
+                                    <?php if ( $thumbnail_url != "" ) { ?> data-link='<?php echo $thumbnail_url; ?>' <?php } ?>
+                                    class='thumbnail <?php echo $thumbnail_class; ?>' style='display: none;' data-largesrc="<?php echo $thumbnail_img_lg; ?>" data-title="<?php the_title(); ?>" data-description='<?php echo $thumbnail_desc; ?>'>
+                                    <div class='thumbnail-image' style="background-image: url('<?php echo $thumbnail_img_sm; ?>')"></div>
+                                </li>
+                                <?php $thumbnail_apparel_count++; ?>
+                                <?php } ?>
                             <?php } ?>
-
                     <?php endwhile; ?>
 
                 <?php } ?>
